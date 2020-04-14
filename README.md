@@ -1,7 +1,7 @@
 ![version](https://img.shields.io/badge/version-0.1-blue)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
 
-# Workday Lovelace card for Home Assistant
+# Holiday Lovelace card for Korean workday binary sensor
 
 <br>
 

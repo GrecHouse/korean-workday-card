@@ -388,6 +388,6 @@
         }
     }
 
-    customElements.define('holiday-card', LovelaceMultilineTextInput);
+    customElements.define('korean-workday-card', LovelaceMultilineTextInput);
 })(window.LitElement || Object.getPrototypeOf(customElements.get("hui-view")));
 

@@ -77,6 +77,16 @@ autosave: false
 |max_length| (옵션) 최대 입력 가능한 글자수<br>input_text의 최대길이인 255로 지정 |
 |autosave| (옵션) 자동저장여부<br>false로 사용하는게 좋습니다.|
 
+
+### 내용 입력
+
+- 한 줄에 휴일 하나씩만 입력하세요.
+- `yyyymmdd#휴일명` 또는 `mmdd#휴일명` 형식으로 입력합니다.
+- `mmdd` 형식은 매년 반복되는 휴일인 경우에 사용하면 됩니다.
+- `#휴일명`은 생략 가능합니다. 휴일명은 workday 센서에 속성값으로 보여집니다.
+- 물음표 아이콘을 눌러 사용방법을 확인할 수 있습니다.
+- 저장 아이콘을 입력하면 korean_workday 센서에 즉각적으로 반영됩니다.
+
 <br>
 
 ### 이 카드는 [lovelace-multiline-text-input-card](https://github.com/faeibson/lovelace-multiline-text-input-card) 를 커스터마이징했습니다.

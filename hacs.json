@@ -1,0 +1,6 @@
+{
+    "name": "[KR] Korean Workday Sensor Card",
+    "content_in_root": true,
+    "filename": "korean-workday-card.js",
+    "render_readme": true
+}

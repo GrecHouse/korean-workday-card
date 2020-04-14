@@ -51,11 +51,13 @@ input_text:
     name: Holiday
     max: 255
 ```
+<br>
 
 ###  HA에 리소스 추가
 (직접 설치시) HA 설정 > Lovelace 대시보드 > 리소스를 추가합니다.
 - `/local/korean-workday-card.js?v=0.1`
 - 리소스 유형은 `자바스크립트 모듈` 입니다.
+<br>
 
 ### 카드 설정
 lovelace 카드 설정은 아래와 같이 합니다.
@@ -66,6 +68,7 @@ entity: input_text.holiday
 max_length: 255
 autosave: false
 ```
+<br>
 
 ### 설정값
 
@@ -76,7 +79,7 @@ autosave: false
 |title| (옵션) 카드 상단에 표시되는 카드명칭<br>설정하지 않을 경우 기본값은 Holiday |
 |max_length| (옵션) 최대 입력 가능한 글자수<br>input_text의 최대길이인 255로 지정 |
 |autosave| (옵션) 자동저장여부<br>false로 사용하는게 좋습니다.|
-
+<br>
 
 ### 내용 입력
 

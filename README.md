@@ -27,10 +27,11 @@ korean workday 커스텀 바이너리 센서를 위한 홈어시스턴트 lovela
 ## Installation
 
 ### HACS로 설치
-- HACS > SETTINGS 메뉴 선택
-- ADD CUSTOM REPOSITORY에 `https://github.com/GrecHouse/korean-workday-card` 입력, \
-  Category에 `Plugin` 선택 후 저장
-- HACS > PLUGINS 메뉴에서 `[KR] Korean Workday Sensor Card` 검색하여 설치
+- HACS > Frontend 메뉴 선택
+- 우측 상단 메뉴 버튼 클릭 후 Custom repositories 선택
+- Add Custom Repository URL 에 `https://github.com/GrecHouse/korean-workday-card` 입력, \
+  Category에 `Lovelace` 선택 후 ADD
+- HACS > Frontend 메뉴에서 우측 하단 + 버튼 누르고 `[KR] Korean Workday Sensor Card` 검색하여 설치
 
 ### 직접 설치
 - HA 설치 경로 아래 www 폴더에 파일을 넣어줍니다.\

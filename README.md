@@ -21,6 +21,7 @@ korean workday 커스텀 바이너리 센서를 위한 홈어시스턴트 lovela
 | Version | Date        |               |
 | :-----: | :---------: | ------------- |
 | v0.1    | 2020.04.14  | 최초 배포 |
+| v0.2    | 2020.11.09  | Fixed HA 0.116 compatibility issue |
 
 <br>
 
@@ -99,5 +100,5 @@ autosave: false
 
 ## 버그 또는 문의사항
 네이버 카페 [HomeAssistant](https://cafe.naver.com/koreassistant/) `그렉하우스` \
-네이버 카페 [SmartThings&IoT Home](https://cafe.naver.com/stsmarthome/) `그레고리하우스`
+네이버 카페 [SmartThings&IoT Home](https://cafe.naver.com/stsmarthome/) `그렉하우스`
 

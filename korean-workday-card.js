@@ -94,7 +94,7 @@
         }
 
         render() {
-            return html`
+            return this.stateObj ? html`
                 <ha-card .hass="${this._hass}" .config="${this._config}" class="background">
                     ${this.state.title ? html`<div class="card-header">${this.state.title}</div>` : null}
                     <div class="card-content">
@@ -114,7 +114,7 @@
                         ${Object.keys(this.state.buttons).map(this.renderButton.bind(this))}
                         <span class="button text-small text-right" title="Help" @tap="${() => this.toggleHelp()}"><ha-icon icon="mdi:help-circle-outline"></ha-icon></span>
                     </div>
-                </ha-card>`;
+                </ha-card>` : null;
         }
 
         toggleHelp() {
@@ -138,13 +138,18 @@
         }
 
         getText() {
-            return this.shadowRoot.querySelector(".textarea").value;
+            return this.shadowRoot ? this.shadowRoot.querySelector(".textarea").value : "";
         }
 
         setText(val, entity_update) {
+            if(!this.shadowRoot) {
+                return false;
+            }
+
             if(entity_update === true) {
                 this.state.last_updated_text = val;
             }
+
             this.shadowRoot.querySelector(".textarea").value = val;
             this.resizeTextarea();
             this.updateCharactersInfoText();
@@ -157,6 +162,10 @@
 
         pasteText() {
             clearTimeout(this.state.autosave_timeout);
+            if(!this.shadowRoot) {
+                return false;
+            }
+
             let elem = this.shadowRoot.querySelector(".textarea");
             if(elem) {
                 elem.focus();
@@ -185,6 +194,9 @@
         }
 
         updateCharactersInfoText() {
+            if(!this.shadowRoot) {
+                return false;
+            }
             let textLength = this.shadowRoot.querySelector(".textarea").value.length;
             let button_save = this.shadowRoot.querySelector("#button-save");
             let disable_button = false;
@@ -233,6 +245,9 @@
         }
 
         resizeTextarea() {
+            if(!this.shadowRoot) {
+                return false;
+            }
             let textArea = this.shadowRoot.querySelector('.textarea');
             let textAreaComputedStyle = getComputedStyle(textArea);
             textArea.style.height = "auto";
@@ -389,5 +404,4 @@
     }
 
     customElements.define('korean-workday-card', LovelaceMultilineTextInput);
-})(window.LitElement || Object.getPrototypeOf(customElements.get("hui-view")));
-
+})(window.LitElement || Object.getPrototypeOf(customElements.get("hui-masonry-view") || customElements.get("hui-view")));
